@@ -1934,19 +1934,19 @@ export default function RF64({
         <div
           style={{
             width:
-              "min(92vw, 620px)",
+              "min(86vw, 520px)",
 
             background:
               "#fff",
 
             border:
-              "5px solid #111",
+              "4px solid #111",
 
             boxShadow:
-              "10px 10px 0 #777",
+              "8px 8px 0 #777",
 
             padding:
-              "28px",
+              "18px",
 
             color:
               "#111",
@@ -1955,7 +1955,7 @@ export default function RF64({
               "grid",
 
             gap:
-              "24px",
+              "14px",
           }}
         >
 
@@ -1973,16 +1973,16 @@ export default function RF64({
                 "space-between",
 
               borderBottom:
-                "5px solid #111",
+                "4px solid #111",
 
               paddingBottom:
-                "16px",
+                "10px",
             }}
           >
             <strong
               style={{
                 fontSize:
-                  "clamp(38px, 9vw, 68px)",
+                  "clamp(32px, 6vw, 52px)",
 
                 lineHeight:
                   1,
@@ -1997,7 +1997,7 @@ export default function RF64({
             <span
               style={{
                 fontSize:
-                  "14px",
+                  "12px",
 
                 fontWeight:
                   900,
@@ -2016,10 +2016,10 @@ export default function RF64({
                 "grid",
 
               gridTemplateColumns:
-                "minmax(140px, 1fr) minmax(170px, .9fr)",
+                "minmax(120px, 1fr) minmax(150px, .9fr)",
 
               gap:
-                "24px",
+                "16px",
 
               alignItems:
                 "start",
@@ -2032,13 +2032,13 @@ export default function RF64({
               <div
                 style={{
                   fontSize:
-                    "13px",
+                    "11px",
 
                   fontWeight:
                     900,
 
                   marginBottom:
-                    "9px",
+                    "6px",
                 }}
               >
                 {resultFriend
@@ -2073,7 +2073,7 @@ export default function RF64({
                     "2.3%",
 
                   boxShadow:
-                    "6px 6px 0 #777",
+                    "5px 5px 0 #777",
                 }}
               >
                 {(
@@ -2117,7 +2117,7 @@ export default function RF64({
                   "grid",
 
                 gap:
-                  "9px",
+                  "5px",
               }}
             >
               {roundScores.map(
@@ -2143,13 +2143,13 @@ export default function RF64({
                         "2px solid #111",
 
                       padding:
-                        "5px 0",
+                        "3px 0",
 
                       fontWeight:
                         900,
 
                       fontSize:
-                        "18px",
+                        "15px",
                     }}
                   >
                     <span>
@@ -2173,13 +2173,13 @@ export default function RF64({
           <div
             style={{
               borderTop:
-                "5px solid #111",
+                "4px solid #111",
 
               borderBottom:
-                "5px solid #111",
+                "4px solid #111",
 
               padding:
-                "16px 0",
+                "10px 0",
 
               display:
                 "flex",
@@ -2194,7 +2194,7 @@ export default function RF64({
             <strong
               style={{
                 fontSize:
-                  "20px",
+                  "16px",
               }}
             >
               TOTAL
@@ -2203,7 +2203,7 @@ export default function RF64({
             <strong
               style={{
                 fontSize:
-                  "clamp(54px, 13vw, 92px)",
+                  "clamp(44px, 8vw, 68px)",
 
                 lineHeight:
                   0.9,
@@ -2225,7 +2225,7 @@ export default function RF64({
                 "1fr 1fr",
 
               gap:
-                "14px",
+                "10px",
             }}
           >
             <button
@@ -2238,7 +2238,7 @@ export default function RF64({
                   "none",
 
                 border:
-                  "4px solid #111",
+                  "3px solid #111",
 
                 borderRadius:
                   0,
@@ -2250,7 +2250,7 @@ export default function RF64({
                   "#fff",
 
                 minHeight:
-                  "54px",
+                  "42px",
 
                 font:
                   "inherit",
@@ -2262,7 +2262,7 @@ export default function RF64({
                   "pointer",
 
                 boxShadow:
-                  "0 6px 0 #777",
+                  "0 4px 0 #777",
               }}
             >
               EXPORT PNG
@@ -2278,7 +2278,7 @@ export default function RF64({
                   "none",
 
                 border:
-                  "4px solid #111",
+                  "3px solid #111",
 
                 borderRadius:
                   0,
@@ -2290,7 +2290,7 @@ export default function RF64({
                   "#111",
 
                 minHeight:
-                  "54px",
+                  "42px",
 
                 font:
                   "inherit",
@@ -2302,7 +2302,7 @@ export default function RF64({
                   "pointer",
 
                 boxShadow:
-                  "0 6px 0 #777",
+                  "0 4px 0 #777",
               }}
             >
               PLAY AGAIN
