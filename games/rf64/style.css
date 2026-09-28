@@ -1,0 +1,364 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE / SHELL
+   ========================================================= */
+
+.rf64-shell {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+
+  background: #ececec;
+  color: #111;
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    monospace;
+
+  user-select: none;
+  -webkit-user-select: none;
+
+  touch-action: manipulation;
+}
+
+
+/* =========================================================
+   DEVICE
+   ========================================================= */
+
+.rf64-device {
+  width: min(86vw, 520px);
+  aspect-ratio: 4 / 5;
+
+  padding: 7% 8% 7%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8%;
+
+  border: 5px solid #111;
+
+  /*
+   * Almost square.
+   * Tiny radius only prevents ugly browser edge aliasing.
+   */
+  border-radius: 4px;
+
+  background: #d8d8d8;
+
+  /*
+   * Hard block shadow.
+   */
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.55),
+    9px 9px 0 #777;
+}
+
+
+/* =========================================================
+   8 × 8 PIXEL SCREEN
+   ========================================================= */
+
+.rf64-matrix {
+  width: 72%;
+  aspect-ratio: 1;
+
+  padding: 3.5%;
+
+  display: grid;
+
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+
+  gap: 2.2%;
+
+  border: 5px solid #111;
+  border-radius: 0;
+
+  background: #111;
+
+  /*
+   * Hard offset shadow.
+   */
+  box-shadow:
+    7px 7px 0 #777;
+
+  image-rendering: pixelated;
+}
+
+
+/* =========================================================
+   PIXELS
+   ========================================================= */
+
+.rf64-led {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  align-self: stretch;
+  justify-self: stretch;
+
+  aspect-ratio: 1;
+
+  /*
+   * True square pixels.
+   */
+  border-radius: 0;
+
+  /*
+   * OFF pixel remains slightly visible.
+   */
+  background: #252525;
+
+  /*
+   * No LED effect.
+   */
+  box-shadow: none;
+
+  transition:
+    background 20ms linear;
+}
+
+
+/* =========================================================
+   ON PIXEL
+   ========================================================= */
+
+.rf64-led.is-on {
+  background: #f4f4ee;
+
+  /*
+   * No glow.
+   */
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   CONTROLS
+   ========================================================= */
+
+.rf64-controls {
+  /*
+   * Same width as the pixel screen.
+   */
+  width: 72%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  /*
+   * Small gap keeps the two buttons visually connected
+   * to the width of the screen.
+   */
+  gap: 12%;
+
+  align-items: end;
+}
+
+
+/* =========================================================
+   INDIVIDUAL CONTROL
+   ========================================================= */
+
+.rf64-control {
+  width: 100%;
+
+  display: grid;
+
+  justify-items: center;
+
+  gap: 10px;
+
+  font-weight: 900;
+
+  font-size: 17px;
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   PIXEL HARDWARE BUTTON
+   ========================================================= */
+
+.rf64-button {
+  /*
+   * Button fills its half of the control row.
+   * Therefore the complete A/B row stays aligned
+   * with the screen above.
+   */
+  width: 100%;
+  height: 54px;
+
+  padding: 0;
+
+  border: 4px solid #111;
+  border-radius: 0;
+
+  background: #bdbdbd;
+
+  cursor: pointer;
+
+  /*
+   * Same hard physical shadow language
+   * as the screen and console.
+   */
+  box-shadow:
+    0 7px 0 #666;
+
+  -webkit-tap-highlight-color: transparent;
+
+  transition:
+    transform 40ms linear,
+    box-shadow 40ms linear;
+}
+
+
+/* =========================================================
+   BUTTON PRESS
+   ========================================================= */
+
+.rf64-button:not(:disabled):active {
+  transform: translateY(5px);
+
+  box-shadow:
+    0 2px 0 #666;
+}
+
+
+/* =========================================================
+   KEYBOARD FOCUS
+   ========================================================= */
+
+.rf64-button:focus-visible {
+  outline: 4px solid #111;
+  outline-offset: 5px;
+}
+
+
+/* =========================================================
+   DISABLED BUTTON
+   ========================================================= */
+
+.rf64-button:disabled {
+  cursor: default;
+
+  opacity: 0.55;
+}
+
+
+/* =========================================================
+   SHORT DESKTOP / LAPTOP SCREENS
+   ========================================================= */
+
+@media (max-height: 700px) {
+
+  .rf64-device {
+    width: min(72vh, 460px);
+
+    gap: 7%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .rf64-device {
+    width: min(94vw, 460px);
+
+    padding: 7%;
+
+    border-width: 4px;
+    border-radius: 3px;
+
+    box-shadow:
+      inset 0 0 0 2px rgba(255, 255, 255, 0.55),
+      7px 7px 0 #777;
+  }
+
+
+  .rf64-matrix {
+    width: 76%;
+
+    border-width: 4px;
+
+    box-shadow:
+      5px 5px 0 #777;
+  }
+
+
+  .rf64-controls {
+    /*
+     * Keep exact alignment with mobile matrix.
+     */
+    width: 76%;
+
+    gap: 12%;
+  }
+
+
+  .rf64-button {
+    height: 48px;
+
+    border-width: 4px;
+
+    box-shadow:
+      0 6px 0 #666;
+  }
+
+
+  .rf64-button:not(:disabled):active {
+    transform: translateY(4px);
+
+    box-shadow:
+      0 2px 0 #666;
+  }
+
+
+  .rf64-control {
+    gap: 9px;
+
+    font-size: 16px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .rf64-led,
+  .rf64-button {
+    transition: none;
+  }
+
+}

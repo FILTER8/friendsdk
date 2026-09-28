@@ -6,3 +6,7 @@ contracts/cache/
 contracts/deployments/
 
 .friendsdk/
+
+.DS_Store
+**/.DS_Store
+games/rf64/.friendsdk/

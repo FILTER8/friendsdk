@@ -1,0 +1,12 @@
+{
+  "name": "RF64",
+  "consumable": "Run",
+  "price": "1000000000000000000",
+  "outcomes": [
+    {
+      "name": "RF64 score",
+      "chanceBps": 10000,
+      "reward": "1000000000000000000"
+    }
+  ]
+}
